@@ -63,6 +63,7 @@ function createCategory(){
     categoriesList.addCategory(categoryName);
 
     //console.log(categorieslist.categories);
+    console.log("Categorias criadas!");
 }
 
 function createProduct(){
@@ -72,6 +73,11 @@ function createProduct(){
 
     procutsList.addProduct(procutName,procutPrice,procutCategory);
 
-    console.log(procutsList.products);
+    //console.log(procutsList.products);
+}
 
+function findCategory(id){
+    const category= categoriesList.getCategoryCategoryById(id);
+
+    console.log(category.name);
 }
