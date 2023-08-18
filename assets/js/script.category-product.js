@@ -30,7 +30,13 @@ class CategoryService{
         const category = new Category(id, name);
         this.categories.push(category);
     }
+
+    getCategoryCategoryById(id){
+        return this.categories.find((category)=> category.id == id );
+    }
 }
+
+
 
     class ProductService{
         constructor() {
@@ -42,16 +48,30 @@ class CategoryService{
         const id= this.nextProductiId;
         this.nextProductiId++;
 
-        const product = new Product(name, price, category);
+        const product = new Product(id,name, price, category);
         this.products.push(product);
+        category.products.push(product);
     }
+
 }
-const categorieslist = new CategoryService();
+const categoriesList = new CategoryService();
+const procutsList= new ProductService();
 
 function createCategory(){
     const categoryName= "Candies";
 
-    categorieslist.addCategory(categoryName);
+    categoriesList.addCategory(categoryName);
 
-    console.log(categorieslist.categories);
+    //console.log(categorieslist.categories);
+}
+
+function createProduct(){
+    const procutName= "Choco";
+    const procutPrice= 0.50;
+    const procutCategory =categoriesList.categories[0];
+
+    procutsList.addProduct(procutName,procutPrice,procutCategory);
+
+    console.log(procutsList.products);
+
 }
