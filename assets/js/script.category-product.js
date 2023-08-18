@@ -22,7 +22,8 @@ class CategoryService{
         this.categories= [];
         this.nextCategoryId= 1;
     }
-
+//CREUD =>
+// C => create
     addCategory(name){
         const id= this.nextCategoryId;
         this.nextCategoryId ++;
@@ -31,8 +32,15 @@ class CategoryService{
         this.categories.push(category);
     }
 
+    //R=> read
     getCategoryCategoryById(id){
         return this.categories.find((category)=> category.id == id );
+    }
+
+    //U=> update
+    UpdateCategory(id, name){
+        const category= this.getCategoryCategoryById(id);
+        category.name= name;
     }
 }
 
