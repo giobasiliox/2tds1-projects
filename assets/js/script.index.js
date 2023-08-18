@@ -35,7 +35,9 @@ function createCar(){
 
     listaCars.adicionar(car);
 
-    console.log(`O marca do carro é ${marca} e o modelo é ${modelo}.`);
+    listaCars.cars.forEach((car)=>{
+        console.log(`Marca: ${marca} Modelo: ${modelo}`)
+    })
 }
 
 
