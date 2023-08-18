@@ -108,7 +108,7 @@ function createProduct(){
     procutsList.addProduct(procutName1,procutPrice1,procutCategory1);
     procutsList.addProduct(procutName2,procutPrice2,procutCategory2);
 
-    //console.log(procutsList.products);
+    console.log(procutsList.products);
 }
 
  //R=> read
