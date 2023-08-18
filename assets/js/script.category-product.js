@@ -82,6 +82,7 @@ function createCategory(){
 
     categoriesList.addCategory(categoryName);
 
+    displayCategories();
     clearFields();
 
 
@@ -137,6 +138,17 @@ function findProductById(id){
     console.log(product);
 }
 
+function displayCategories(){
+    let content= "";
+
+    categoriesList.categories.forEach((category)=>{
+        content+= `<li> ${category.name}</li>`;
+
+        document.getElementById("categoriesList").innerHTML= content;
+    })
+}
+
 function clearFields(){
     document.getElementById("categoryNameInput").value="";
 }
+

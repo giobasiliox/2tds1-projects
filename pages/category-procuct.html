@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,23 @@
     <link rel="stylesheet" href="../assets/css/styles.category-product.css">
     <title>Categorias & produtos</title>
 </head>
+
 <body>
-<div id="container">
-    <h1> 🛍️Categorias e Produtos</h1>
-    <div class="form-container">
-        <h2>📂Criar Categoria</h2>
-        <label for="">Nome da categoria:</label>
-        <input type="text" required id="categoryNameInput">
-        <button class="btn" onclick="createCategory()">Criar Categoria</button>
+    <div id="container">
+        <h1> 🛍️Categorias e Produtos</h1>
+        <div class="form-container">
+            <h2>📂Criar Categoria</h2>
+            <label for="categoryNameInput">Nome da categoria:</label>
+            <input type="text" required id="categoryNameInput">
+            <button class="btn" onclick="createCategory()">Criar Categoria</button>
+        </div>
+        
+        <div id="list-container">
+            <h2>Categorias e Produtos</h2>
+            <ul id="categoriesList"></ul>
+        </div>
     </div>
-</div>
+
 </body>
+
 </html>
