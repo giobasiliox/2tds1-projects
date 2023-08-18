@@ -67,8 +67,12 @@ const procutsList= new ProductService();
 
 function createCategory(){
     const categoryName= "Candies";
+    const categoryName1= "Shoes";
+    const categoryName2= "Book";
 
     categoriesList.addCategory(categoryName);
+    categoriesList.addCategory(categoryName1);
+    categoriesList.addCategory(categoryName2);
 
     //console.log(categorieslist.categories);
     console.log("Categorias criadas!");
@@ -88,4 +92,10 @@ function findCategory(id){
     const category= categoriesList.getCategoryCategoryById(id);
 
     console.log(category.name);
+}
+
+function editCategory(id,name){
+    categoriesList.UpdateCategory(id,name);
+
+    console.log(categoriesList.categories);
 }
