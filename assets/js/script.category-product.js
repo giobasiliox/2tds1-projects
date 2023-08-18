@@ -95,8 +95,18 @@ function createProduct(){
     const procutName= "Choco";
     const procutPrice= 0.50;
     const procutCategory =categoriesList.categories[0];
+    
+    const procutName1= "Sneakers";
+    const procutPrice1= 100;
+    const procutCategory1 =categoriesList.categories[1];
+   
+    const procutName2= "Harry Potter";
+    const procutPrice2= 50;
+    const procutCategory2 =categoriesList.categories[2];
 
     procutsList.addProduct(procutName,procutPrice,procutCategory);
+    procutsList.addProduct(procutName1,procutPrice1,procutCategory1);
+    procutsList.addProduct(procutName2,procutPrice2,procutCategory2);
 
     //console.log(procutsList.products);
 }
@@ -120,4 +130,10 @@ function deleteCategory(id){
     categoriesList.deleteCategory(id);
 
     console.log(categoriesList.categories);
+}
+
+function findProductById(id){
+    const product= procutsList.getProductById(id);
+
+    console.log(product);
 }
