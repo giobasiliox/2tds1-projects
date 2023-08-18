@@ -86,6 +86,7 @@ function createCategory(){
     console.log("Categorias criadas!");
 }
 
+// C => create
 function createProduct(){
     const procutName= "Choco";
     const procutPrice= 0.50;
@@ -96,18 +97,21 @@ function createProduct(){
     //console.log(procutsList.products);
 }
 
+ //R=> read
 function findCategory(id){
     const category= categoriesList.getCategoryCategoryById(id);
 
     console.log(category.name);
 }
 
+//U=> update
 function editCategory(id,name){
     categoriesList.UpdateCategory(id,name);
 
     console.log(categoriesList.categories);
 }
 
+//D=> delet
 function deleteCategory(id){
     categoriesList.deleteCategory(id);
 
